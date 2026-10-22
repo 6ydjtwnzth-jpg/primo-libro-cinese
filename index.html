@@ -6,6 +6,7 @@
 <title>Primo Libro di Cinese</title>
 <meta name="description" content="Corso interattivo per imparare a parlare e capire il cinese da zero: dialoghi, esercizi d'ascolto, flashcard.">
 <meta name="theme-color" content="#f7f1e6">
+<script>try{var t=localStorage.getItem("primo-libro-cinese-theme");if(t==="dark"||t==="light")document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Fraunces:ital,opsz,wght,SOFT@0,9..144,500,100;0,9..144,600,100;1,9..144,500,100&family=Ma+Shan+Zheng&family=Noto+Serif+SC:wght@400;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400&display=swap">
@@ -20,7 +21,7 @@
   --tint:#f2eadc; --ok:#2b7a4b; --ok-bg:#e3f2e7; --bad:#b8392a; --bad-bg:#fbe6e1;
   --t1:#c9361f; --t2:#b86f05; --t3:#2a7d49; --t4:#2f55b5; --t5:#8a8178;
   --on-accent:#fffaf3;
-  --sky1:#fbe9cf; --sky2:#f6d6bd; --m3:#d3dccb; --m2:#88aa98; --m1:#2f5e55; --water:#e8d9c1;
+  --sky1:#fbe9cf; --sky2:#f6d6bd; --m3:#d3dccb; --m2:#88aa98; --m1:#2f5e55; --water:#e8d9c1; --cloud:#fffdf8;
   --shadow:0 1px 2px rgba(70,45,20,.05),0 10px 30px -14px rgba(70,45,20,.22);
   --shadow-lg:0 2px 6px rgba(70,45,20,.06),0 24px 60px -24px rgba(70,45,20,.35);
   --r:18px;
@@ -38,7 +39,7 @@
   --tint:#27231d; --ok:#72d29a; --ok-bg:#163026; --bad:#f28c79; --bad-bg:#3b201b;
   --t1:#ff7a63; --t2:#f2b24c; --t3:#6fd197; --t4:#8aa8ff; --t5:#9d958a;
   --on-accent:#15130f;
-  --sky1:#1c2333; --sky2:#2c2836; --m3:#2b3a3f; --m2:#21403b; --m1:#122824; --water:#1a2226;
+  --sky1:#1c2333; --sky2:#2c2836; --m3:#2b3a3f; --m2:#21403b; --m1:#122824; --water:#1a2226; --cloud:#4e4c5e;
   --shadow:0 1px 2px rgba(0,0,0,.3),0 10px 30px -14px rgba(0,0,0,.6);
   --shadow-lg:0 2px 6px rgba(0,0,0,.3),0 24px 60px -24px rgba(0,0,0,.8);
   color-scheme:dark}}
@@ -48,7 +49,7 @@
   --tint:#27231d; --ok:#72d29a; --ok-bg:#163026; --bad:#f28c79; --bad-bg:#3b201b;
   --t1:#ff7a63; --t2:#f2b24c; --t3:#6fd197; --t4:#8aa8ff; --t5:#9d958a;
   --on-accent:#15130f;
-  --sky1:#1c2333; --sky2:#2c2836; --m3:#2b3a3f; --m2:#21403b; --m1:#122824; --water:#1a2226;
+  --sky1:#1c2333; --sky2:#2c2836; --m3:#2b3a3f; --m2:#21403b; --m1:#122824; --water:#1a2226; --cloud:#4e4c5e;
   --shadow:0 1px 2px rgba(0,0,0,.3),0 10px 30px -14px rgba(0,0,0,.6);
   --shadow-lg:0 2px 6px rgba(0,0,0,.3),0 24px 60px -24px rgba(0,0,0,.8);
   color-scheme:dark}
@@ -291,6 +292,11 @@ td.hz{font-family:var(--f-han);font-size:23px;white-space:nowrap}
 .tb-top{background:var(--seal);color:var(--seal-ink)}
 .tb-top:hover{background:var(--seal);filter:brightness(1.08)}
 .tb svg{width:15px;height:15px}
+.tb-theme{width:40px;padding:0;justify-content:center}
+.tb-theme svg{width:18px;height:18px}
+.tb-theme .i-sun{display:none}
+.tb-theme[aria-pressed="true"] .i-sun{display:block}
+.tb-theme[aria-pressed="true"] .i-moon{display:none}
 body.no-hz .hzx{display:none!important}
 
 /* nel parlato */
@@ -379,6 +385,7 @@ img{max-width:100%}
 <div class="topbar" role="toolbar" aria-label="Comandi di ascolto">
   <button class="tb" id="tbhz" type="button" aria-pressed="true" title="Mostra o nascondi i caratteri cinesi"><span class="han">汉字</span><span id="tbhzl">sì</span></button>
   <button class="tb" id="tbslow" type="button" aria-pressed="false" title="Velocità della voce">Voce: <span id="tbslowl">normale</span></button>
+  <button class="tb tb-theme" id="tbtheme" type="button" aria-pressed="false" aria-label="Tema scuro" title="Tema scuro sì/no"><svg class="i-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg><svg class="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6"/></svg></button>
   <button class="tb tb-top" id="totop" type="button" aria-label="Torna all'inizio della pagina"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg>Inizio</button>
 </div>
 <div class="book">
@@ -424,7 +431,7 @@ img{max-width:100%}
       <defs><linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" style="stop-color:var(--sky1)"/><stop offset="1" style="stop-color:var(--sky2)"/></linearGradient></defs>
       <rect width="800" height="450" fill="url(#sky)"/>
       <circle cx="560" cy="205" r="92" style="fill:var(--seal)"/>
-      <g style="fill:var(--sheet)" opacity=".75">
+      <g style="fill:var(--cloud)" opacity=".75">
         <rect x="430" y="118" width="170" height="12" rx="6"/><rect x="480" y="100" width="90" height="12" rx="6"/>
         <rect x="610" y="150" width="140" height="10" rx="5"/><rect x="250" y="170" width="120" height="10" rx="5"/>
       </g>
@@ -1948,6 +1955,17 @@ $$(".toc a").forEach(function(a){a.addEventListener("click",function(){try{if(!m
   var cur=null;
   var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting&&links[e.target.id]){if(cur)cur.classList.remove("on");cur=links[e.target.id];cur.classList.add("on")}})},{rootMargin:"-30% 0px -60% 0px"});
   Array.prototype.forEach.call(document.querySelectorAll("section.lesson[id]"),function(s){io.observe(s)});
+})();
+</script>
+<script>
+(function(){
+  var K="primo-libro-cinese-theme",root=document.documentElement,btn=document.getElementById("tbtheme"),meta=document.querySelector('meta[name="theme-color"]');
+  var mq=null;try{mq=matchMedia("(prefers-color-scheme: dark)")}catch(e){}
+  function isDark(){var t=root.getAttribute("data-theme");return t?t==="dark":!!(mq&&mq.matches)}
+  function sync(){var d=isDark();btn.setAttribute("aria-pressed",d?"true":"false");btn.setAttribute("aria-label",d?"Tema chiaro":"Tema scuro");btn.title=d?"Passa al tema chiaro":"Passa al tema scuro";if(meta)meta.setAttribute("content",d?"#15130f":"#f7f1e6")}
+  btn.onclick=function(){var t=isDark()?"light":"dark";root.setAttribute("data-theme",t);try{localStorage.setItem(K,t)}catch(e){}sync()};
+  if(mq){try{mq.addEventListener("change",sync)}catch(e){try{mq.addListener(sync)}catch(e2){}}}
+  sync();
 })();
 </script>
 </body>
