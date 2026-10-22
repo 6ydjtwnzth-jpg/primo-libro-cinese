@@ -59,7 +59,7 @@
 .p2,#l5,#l6,#l7,#l8,#l9,#l10{--accent:var(--jade)}
 .p3,#l11,#l12,#l13,#l14,#l15,#l16,#l17,#l18{--accent:var(--indigo)}
 .p4,#l3,#l4{--accent:var(--ochre)}
-.p5,#frasi,#flash,#vocab{--accent:var(--plum)}
+.p5,#verbi,#frasi,#flash,#vocab{--accent:var(--plum)}
 section.lesson,.partttl,.toc li{--accent-soft:color-mix(in srgb,var(--accent) 12%,var(--sheet))}
 
 *{box-sizing:border-box}
@@ -417,9 +417,10 @@ img{max-width:100%}
       <li><a href="#l3"><span>17 · Tratti e ordine</span><span class="sc" data-sc="l3"></span></a></li>
       <li><a href="#l4"><span>18 · Com'è fatto un carattere</span><span class="sc" data-sc="l4"></span></a></li>
       <li class="part">Appendici</li>
-      <li><a href="#frasi">A · Frasario</a></li>
-      <li><a href="#flash">B · Flashcard</a></li>
-      <li><a href="#vocab">C · Vocabolario</a></li>
+      <li><a href="#verbi"><span>A · I tempi del verbo</span><span class="sc" data-sc="verbi"></span></a></li>
+      <li><a href="#frasi">B · Frasario</a></li>
+      <li><a href="#flash">C · Flashcard</a></li>
+      <li><a href="#vocab">D · Vocabolario</a></li>
     </ol>
   </details>
 </nav>
@@ -485,7 +486,7 @@ img{max-width:100%}
   <h3>La sessione quotidiana (20 minuti)</h3>
   <div class="tw"><table class="plan">
     <tr><th>Minuti</th><th>Attività</th></tr>
-    <tr><td>4</td><td>Flashcard in modalità ascolto: senti la parola e prova a capirla (Appendice B).</td></tr>
+    <tr><td>4</td><td>Flashcard in modalità ascolto: senti la parola e prova a capirla (Appendice C).</td></tr>
     <tr><td>6</td><td>Dialogo della lezione: ascolto, shadowing, poi recita la parte di B.</td></tr>
     <tr><td>6</td><td>Una regola della lezione e i suoi esercizi.</td></tr>
     <tr><td>4</td><td>Parla da solo: descrivi ad alta voce in cinese quello che fai, anche con frasi semplicissime (我喝茶。我很忙。).</td></tr>
@@ -659,6 +660,7 @@ img{max-width:100%}
   <div class="dialog" data-dlg="l5"></div>
   <h3>Il verbo non cambia mai</h3>
   <p>In cinese il verbo è sempre uguale: non cambia con la persona, il numero o il tempo. Il «quando» si esprime con parole di tempo (oggi, ieri, domani).</p>
+  <p class="note">Tutti i modi per dire passato, futuro, «sto facendo» o «non bere!» sono riassunti in una tabella nell'<a href="#verbi">Appendice A · I tempi del verbo</a>.</p>
   <div class="exs">
     <div data-zh="我喝茶。" data-py="Wǒ hē chá." data-it="Io bevo tè."></div>
     <div data-zh="他们喝茶。" data-py="Tā-men hē chá." data-it="Loro bevono tè."></div>
@@ -1336,10 +1338,108 @@ img{max-width:100%}
   <div class="drill" data-set="l4"></div>
 </section>
 
-<div class="partttl p5"><span class="pn" lang="zh-CN" aria-hidden="true">附</span><span class="pt"><small>Appendici</small><b>Frasario, flashcard e vocabolario</b></span></div>
+<div class="partttl p5"><span class="pn" lang="zh-CN" aria-hidden="true">附</span><span class="pt"><small>Appendici</small><b>Verbi, frasario, flashcard e vocabolario</b></span></div>
+
+<section class="lesson" id="verbi">
+  <div class="kicker"><span>Appendice A</span><span class="han">动词</span></div>
+  <h2>I tempi del verbo, senza coniugazioni</h2>
+  <p class="lead">In italiano «bere» ha decine di forme: bevo, bevevi, berrà, bevendo… In cinese ne ha una sola: 喝 <span class="py">hē</span>. Tutto quello che in italiano fa la coniugazione, in cinese lo fanno tre cose: le parole di tempo, alcuni avverbi davanti al verbo e tre piccole particelle dopo il verbo.</p>
+
+  <h3>La persona non conta</h3>
+  <p>Il verbo resta uguale per tutte le persone. La persona la dice solo il pronome.</p>
+  <div class="tw"><table>
+    <tr><th>Italiano</th><th>Cinese</th><th>Pinyin</th></tr>
+    <tr><td>io bevo</td><td class="hz">我喝</td><td class="py">wǒ hē</td></tr>
+    <tr><td>tu bevi</td><td class="hz">你喝</td><td class="py">nǐ hē</td></tr>
+    <tr><td>lui / lei beve</td><td class="hz">他喝</td><td class="py">tā hē</td></tr>
+    <tr><td>noi beviamo</td><td class="hz">我们喝</td><td class="py">wǒ-men hē</td></tr>
+    <tr><td>voi bevete</td><td class="hz">你们喝</td><td class="py">nǐ-men hē</td></tr>
+    <tr><td>loro bevono</td><td class="hz">他们喝</td><td class="py">tā-men hē</td></tr>
+  </table></div>
+
+  <div class="rule" data-seal="三件">
+    <h3 style="margin:0;font-size:20px">Gli strumenti al posto della coniugazione</h3>
+    <ul class="plain">
+      <li><b>Parole di tempo</b> prima del verbo: 昨天 <span class="py">zuó-tiān</span> «ieri», 现在 <span class="py">xiàn-zài</span> «adesso», 明天 <span class="py">míng-tiān</span> «domani». Spesso bastano da sole.</li>
+      <li><b>Avverbi e modali</b> prima del verbo: 在 «sto…», 要 «sto per, farò», 会 «probabilmente», 想 «vorrei», 别 «non…!».</li>
+      <li><b>Particelle</b> subito dopo il verbo: 了 <span class="py">le</span> (fatto, compiuto), 过 <span class="py">guo</span> (l'ho già fatto nella vita), 着 <span class="py">zhe</span> (stato che dura).</li>
+    </ul>
+  </div>
+
+  <h3>Dall'italiano al cinese: la mappa</h3>
+  <div class="tw"><table>
+    <tr><th>In italiano</th><th>In cinese</th><th>Lezione</th></tr>
+    <tr class="grp"><td colspan="3">Presente</td></tr>
+    <tr><td>Presente, abitudine (bevo)</td><td>verbo e basta</td><td>3</td></tr>
+    <tr><td>Azione in corso (sto bevendo)</td><td><span class="han">在 / 正在</span> + verbo (+ <span class="han">呢</span>)</td><td>7, 11</td></tr>
+    <tr class="grp"><td colspan="3">Passato</td></tr>
+    <tr><td>Passato prossimo e remoto: un'azione compiuta (ho bevuto, bevvi)</td><td>verbo + <span class="han">了</span></td><td>8</td></tr>
+    <tr><td>Imperfetto: abitudine o stato nel passato (bevevo, ero)</td><td>parola di tempo + verbo, <b>senza</b> <span class="han">了</span></td><td>8</td></tr>
+    <tr><td>Esperienza (ho mai bevuto…? l'ho provato)</td><td>verbo + <span class="han">过</span></td><td>11</td></tr>
+    <tr><td>Già / non ancora</td><td><span class="han">已经…了</span> · <span class="han">还没…呢</span></td><td>11</td></tr>
+    <tr class="grp"><td colspan="3">Futuro</td></tr>
+    <tr><td>Futuro (berrò)</td><td>parola di tempo + verbo · <span class="han">要</span> + verbo</td><td>3, 8</td></tr>
+    <tr><td>Futuro probabile (probabilmente pioverà)</td><td><span class="han">会</span> + verbo</td><td>8</td></tr>
+    <tr><td>Futuro imminente (sta per…)</td><td><span class="han">快要</span> + verbo + <span class="han">了</span></td><td>—</td></tr>
+    <tr class="grp"><td colspan="3">Modi</td></tr>
+    <tr><td>Condizionale (vorrei)</td><td><span class="han">想</span> + verbo</td><td>8</td></tr>
+    <tr><td>Imperativo (bevi! beviamo!)</td><td>verbo + <span class="han">吧</span> · <span class="han">请</span> + verbo</td><td>8</td></tr>
+    <tr><td>Imperativo negativo (non bere!)</td><td><span class="han">别 / 不要</span> + verbo</td><td>8, 14</td></tr>
+    <tr><td>Gerundio (sorridendo)</td><td>verbo + <span class="han">着</span></td><td>11</td></tr>
+    <tr><td>Periodo ipotetico (se piove…)</td><td><span class="han">如果…就…</span></td><td>15</td></tr>
+    <tr><td>Passivo (è stato rubato)</td><td><span class="han">被</span> + verbo</td><td>14</td></tr>
+  </table></div>
+
+  <h3>Presente</h3>
+  <div class="exs">
+    <div data-zh="我喝茶。" data-py="Wǒ hē chá." data-it="Bevo tè. (in generale, di abitudine)"></div>
+    <div data-zh="我在喝茶。" data-py="Wǒ zài hē chá." data-it="Sto bevendo il tè."></div>
+    <div data-zh="他正在打电话呢。" data-py="Tā zhèng-zài dǎ diàn-huà ne." data-it="Sta telefonando proprio adesso."></div>
+  </div>
+
+  <h3>Passato</h3>
+  <div class="exs">
+    <div data-zh="我喝了一杯茶。" data-py="Wǒ hē le yì bēi chá." data-it="Ho bevuto una tazza di tè. (fatto compiuto)"></div>
+    <div data-zh="我以前常常喝咖啡。" data-py="Wǒ yǐ-qián cháng-cháng hē kā-fēi." data-it="Prima bevevo spesso caffè. (abitudine passata: niente 了)"></div>
+    <div data-zh="我昨天很忙。" data-py="Wǒ zuó-tiān hěn máng." data-it="Ieri ero molto occupato. (stato passato: basta 昨天)"></div>
+    <div data-zh="我喝过中国茶。" data-py="Wǒ hē guo Zhōng-guó chá." data-it="Ho già bevuto il tè cinese. (esperienza)"></div>
+    <div data-zh="我已经吃了。" data-py="Wǒ yǐ-jīng chī le." data-it="Ho già mangiato."></div>
+    <div data-zh="我还没吃呢。" data-py="Wǒ hái méi chī ne." data-it="Non ho ancora mangiato."></div>
+  </div>
+  <div class="warn"><strong>Il dubbio più comune</strong>«Ho bevuto» non vuol dire sempre 了. Se racconti un'abitudine o uno stato nel passato (bevevo, ero stanco), basta la parola di tempo. 了 serve quando un'azione precisa si è <b>compiuta</b>.</div>
+
+  <h3>Futuro</h3>
+  <div class="exs">
+    <div data-zh="我明天喝茶。" data-py="Wǒ míng-tiān hē chá." data-it="Domani berrò tè."></div>
+    <div data-zh="我要去北京。" data-py="Wǒ yào qù Běi-jīng." data-it="Andrò a Pechino. (è deciso)"></div>
+    <div data-zh="明天会下雨。" data-py="Míng-tiān huì xià yǔ." data-it="Domani probabilmente pioverà."></div>
+    <div data-zh="快要下雨了。" data-py="Kuài-yào xià yǔ le." data-it="Sta per piovere."></div>
+  </div>
+
+  <h3>Condizionale, imperativo, ipotesi</h3>
+  <div class="exs">
+    <div data-zh="我想喝茶。" data-py="Wǒ xiǎng hē chá." data-it="Vorrei bere un tè."></div>
+    <div data-zh="喝茶吧！" data-py="Hē chá ba!" data-it="Dai, bevi un tè! / Beviamo un tè!"></div>
+    <div data-zh="请喝茶。" data-py="Qǐng hē chá." data-it="Prego, beva il tè. (invito cortese)"></div>
+    <div data-zh="别喝！" data-py="Bié hē!" data-it="Non bere!"></div>
+    <div data-zh="他笑着说。" data-py="Tā xiào zhe shuō." data-it="Disse sorridendo."></div>
+    <div data-zh="如果你累了，就休息吧。" data-py="Rú-guǒ nǐ lèi le, jiù xiū-xi ba." data-it="Se sei stanco, riposati."></div>
+  </div>
+
+  <h3>Le negazioni cambiano con il tempo</h3>
+  <p>Qui sta l'unica vera «coniugazione» del cinese: la negazione giusta dipende da quando è successa la cosa.</p>
+  <div class="exs">
+    <div data-zh="我不喝。" data-py="Wǒ bù hē." data-it="Non bevo / Non berrò. (presente, futuro, volontà)"></div>
+    <div data-zh="我没喝。" data-py="Wǒ méi hē." data-it="Non ho bevuto. (e si toglie 了)"></div>
+    <div data-zh="我没喝过。" data-py="Wǒ méi hē guo." data-it="Non ho mai bevuto."></div>
+    <div data-zh="我还没喝呢。" data-py="Wǒ hái méi hē ne." data-it="Non ho ancora bevuto."></div>
+    <div data-zh="别喝！" data-py="Bié hē!" data-it="Non bere!"></div>
+  </div>
+  <div class="drill" data-set="verbi"></div>
+</section>
 
 <section class="lesson" id="frasi">
-  <div class="kicker"><span>Appendice A</span><span class="han">常用句子</span></div>
+  <div class="kicker"><span>Appendice B</span><span class="han">常用句子</span></div>
   <h2>Frasario: le frasi da sapere a memoria</h2>
   <p>Frasi pronte da usare dal primo giorno, anche prima di conoscerne la grammatica. Imparale come blocchi unici: ascolta, ripeti ad alta voce, poi copri la colonna di sinistra e prova a dirle partendo dall'italiano.</p>
   <h3>Per sopravvivere</h3>
@@ -1394,7 +1494,7 @@ img{max-width:100%}
 </section>
 
 <section class="lesson" id="flash">
-  <div class="kicker"><span>Appendice B</span><span class="han">生词卡</span></div>
+  <div class="kicker"><span>Appendice C</span><span class="han">生词卡</span></div>
   <h2>Flashcard con ripetizione dilazionata</h2>
   <p>Le parole stanno in cinque scatole. Se sai una parola sale di una scatola e la rivedrai più di rado; se la sbagli torna nella prima. Le carte delle scatole basse escono più spesso. Obiettivo: tutte nella scatola 5.</p>
   <p>In <b>modalità ascolto</b> la carta non mostra niente: senti la parola e devi capirla solo con l'orecchio, come in una conversazione. In <b>modalità parlato</b> vedi l'italiano e devi dire la parola in cinese ad alta voce.</p>
@@ -1411,7 +1511,7 @@ img{max-width:100%}
 </section>
 
 <section class="lesson" id="vocab">
-  <div class="kicker"><span>Appendice C</span><span class="han">词汇表</span></div>
+  <div class="kicker"><span>Appendice D</span><span class="han">词汇表</span></div>
   <h2>Vocabolario del libro</h2>
   <p>Le parole usate nelle lezioni, divise per argomento. Sono le stesse delle flashcard.</p>
   <div class="tw"><table id="vocabtbl"></table></div>
@@ -1715,6 +1815,18 @@ EX.l3=[
  {q:"In 这, quando si scrive la componente 辶?",o:["per ultima","per prima","a metà"],e:"辶 si scrive sempre alla fine."},
  {q:"Il tratto 钩 gōu è…",o:["un gancio alla fine di un tratto","un punto","un tratto orizzontale"],e:"钩 significa «gancio», come in fondo al tratto centrale di 小."}
 ];
+EX.verbi=[
+ {q:"«Ho bevuto una tazza di tè.»",o:[["我喝了一杯茶。","Wǒ hē le yì bēi chá."],["我在喝一杯茶。","Wǒ zài hē yì bēi chá."],["我会喝一杯茶。","Wǒ huì hē yì bēi chá."]],e:"Azione compiuta: verbo + 了."},
+ {q:"«Sto mangiando.»",o:[["我在吃饭。","Wǒ zài chī fàn."],["我吃了饭。","Wǒ chī le fàn."],["我吃过饭。","Wǒ chī guo fàn."]],e:"Azione in corso: 在 + verbo."},
+ {q:"«Non ho mai mangiato l'anatra laccata.»",o:[["我没吃过烤鸭。","Wǒ méi chī guo kǎo-yā."],["我不吃烤鸭。","Wǒ bù chī kǎo-yā."],["我没吃了烤鸭。","Wǒ méi chī le kǎo-yā."]],e:"Esperienza negata: 没 + verbo + 过. Con 没 il 了 sparisce."},
+ {q:"«Domani vado a Pechino.»",o:[["我明天去北京。","Wǒ míng-tiān qù Běi-jīng."],["我明天去了北京。","Wǒ míng-tiān qù le Běi-jīng."],["我去北京明天。","Wǒ qù Běi-jīng míng-tiān."]],e:"Per il futuro basta la parola di tempo, prima del verbo."},
+ {q:"«Ieri non sono andato.»",o:[["我昨天没去。","Wǒ zuó-tiān méi qù."],["我昨天不去。","Wǒ zuó-tiān bú qù."],["我昨天没去了。","Wǒ zuó-tiān méi qù le."]],e:"Nel passato si nega con 没, senza 了."},
+ {q:"Ascolta e scegli che cosa significa.",zh:"我以前常常喝咖啡。",py:"Wǒ yǐ-qián cháng-cháng hē kā-fēi.",o:["Prima bevevo spesso caffè.","Adesso bevo spesso caffè.","Berrò spesso caffè."],e:"以前 «prima, in passato»: abitudine passata, quindi niente 了."},
+ {q:"Ascolta e scegli che cosa significa.",zh:"快要下雨了。",py:"Kuài-yào xià yǔ le.",o:["Sta per piovere.","Ha appena piovuto.","Domani forse pioverà."],e:"快要…了 = sta per succedere."},
+ {t:"ord",q:"Componi la frase: «Non ho ancora mangiato.»",w:[["我","wǒ"],["还","hái"],["没","méi"],["吃","chī"],["呢","ne"]],a:["我还没吃呢"]},
+ {t:"say",it:"Ferma un amico: «Non bere!»",zh:"别喝！",py:"Bié hē!"},
+ {t:"say",it:"«Ho già mangiato.»",zh:"我已经吃了。",py:"Wǒ yǐ-jīng chī le."}
+];
 EX.l4=[
  {q:"休 «riposare» è composto da…",o:["persona + albero","sole + luna","donna + bambino"],e:"Una persona 亻 appoggiata a un albero 木."},
  {q:"In 妈 mā «mamma», quale parte suggerisce il suono?",o:["马","女"],e:"马 mǎ dà il suono, 女 «donna» dà il significato."},
@@ -1874,7 +1986,7 @@ var W=V.filter(function(r){return r.length===3});
 
 /* ---------- dizionario per il significato al passaggio del mouse ---------- */
 var DICT={};
-("骂:sgridare|马:cavallo|麻:canapa|妈:mamma|天:cielo, giorno|第:prefisso degli ordinali|他们:loro|意大利人:italiano/a (persona)|中国人:cinese (persona)|高:alto|太:troppo|了:particella: azione compiuta o cambiamento|没:non (nel passato), non avere|没有:non avere; non (passato)|时间:tempo|马可:Marco|这个:questo|是不是:è o non è?|忙不忙:sei occupato o no?|呢:particella: «e…?»|的:particella di possesso o descrizione|车:automobile|十一:undici|二十:venti|二十五:venticinque|九十九:novantanove|一百:cento|零:zero|〇:zero (nelle date)|杯:tazza, bicchiere (classificatore)|这:questo|那:quello|张:classificatore per oggetti piatti|票:biglietto|雨:pioggia|下雨:piovere|饿:avere fame|刻:quarto d'ora|差:mancare|年:anno|星期四:giovedì|早上:mattina|睡:dormire|岁:anni (di età)|还:ancora; inoltre|冷:freddo|北京:Pechino|罗马:Roma|多:molto, tanti|那么:così, tanto|跟:con|烤鸭:anatra laccata|门:porta|开:aprire|着:particella di stato continuo|笑:ridere, sorridere|打:colpire; fare (una telefonata)|电话:telefono|听懂:capire ascoltando|得:particella del complemento di grado|跑:correre|快:veloce|出去:uscire (lontano da qui)|时候:momento|听:ascoltare|远:lontano|见:vedere|到:arrivare|放:mettere|吃完:finire di mangiare|带来:portare (qui)|蛋糕:torta|意思:significato|有意思:interessante|公园:parco|给:dare; a, per|不但:non solo|而且:ma anche|写:scrivere|汉字:carattere cinese|苹果:mela|又:di nuovo; sia… sia…|甜:dolce|刚:appena|说话:parlare|可是:ma, però|明年:l'anno prossimo|上海:Shanghai|看看:dare un'occhiata|"+
+("已经:già|以前:prima, in passato|快要:stare per|休息:riposare|骂:sgridare|马:cavallo|麻:canapa|妈:mamma|天:cielo, giorno|第:prefisso degli ordinali|他们:loro|意大利人:italiano/a (persona)|中国人:cinese (persona)|高:alto|太:troppo|了:particella: azione compiuta o cambiamento|没:non (nel passato), non avere|没有:non avere; non (passato)|时间:tempo|马可:Marco|这个:questo|是不是:è o non è?|忙不忙:sei occupato o no?|呢:particella: «e…?»|的:particella di possesso o descrizione|车:automobile|十一:undici|二十:venti|二十五:venticinque|九十九:novantanove|一百:cento|零:zero|〇:zero (nelle date)|杯:tazza, bicchiere (classificatore)|这:questo|那:quello|张:classificatore per oggetti piatti|票:biglietto|雨:pioggia|下雨:piovere|饿:avere fame|刻:quarto d'ora|差:mancare|年:anno|星期四:giovedì|早上:mattina|睡:dormire|岁:anni (di età)|还:ancora; inoltre|冷:freddo|北京:Pechino|罗马:Roma|多:molto, tanti|那么:così, tanto|跟:con|烤鸭:anatra laccata|门:porta|开:aprire|着:particella di stato continuo|笑:ridere, sorridere|打:colpire; fare (una telefonata)|电话:telefono|听懂:capire ascoltando|得:particella del complemento di grado|跑:correre|快:veloce|出去:uscire (lontano da qui)|时候:momento|听:ascoltare|远:lontano|见:vedere|到:arrivare|放:mettere|吃完:finire di mangiare|带来:portare (qui)|蛋糕:torta|意思:significato|有意思:interessante|公园:parco|给:dare; a, per|不但:non solo|而且:ma anche|写:scrivere|汉字:carattere cinese|苹果:mela|又:di nuovo; sia… sia…|甜:dolce|刚:appena|说话:parlare|可是:ma, però|明年:l'anno prossimo|上海:Shanghai|看看:dare un'occhiata|"+
 "认识:conoscere (una persona)|高兴:contento|认识你很高兴:piacere di conoscerti|哪:quale|哪国人:di che paese|王丽:Wang Li (nome)|小王:Xiao Wang (nome)|别的:altro|还要:volere ancora|一共:in tutto|块:yuan (nel parlato)|元:yuan (scritto)|给你:ecco a te|喂:pronto? (al telefono)|等:aspettare|用:usare|筷子:bacchette|一点儿:un po'|饺子:ravioli cinesi|吧:particella di proposta: «dai, …»|啊:particella esclamativa|带:portare|当然:certo|没问题:nessun problema|糟糕:accidenti!|上课:fare lezione|觉得:pensare, ritenere|怎么样:com'è? che ne pensi?|冬天:inverno|好吃:buono (da mangiare)|好看:bello (da vedere)|好听:bello (da sentire)|真的:davvero|真:davvero, proprio|次:volta|做饭:cucinare|话:parole, discorso|说的话:quello che dice|哪里哪里:ma no, figurati (risposta modesta)|差得远:essere ancora lontano|上海话:shanghaiese|普通话:cinese standard|方言:dialetto|下个月:il mese prossimo|哎呀:ahi! accidenti!|钱包:portafoglio|着急:agitarsi|别着急:non agitarti|别:non (fare)!|这儿:qui|那儿:lì|下面:sotto|没事儿:non è niente|没事:nessun problema|电影:film|看电影:andare al cinema|最近:ultimamente|累:stanco|走走:fare due passi|走:camminare, andare via|然后:e poi|嗨:ciao (informale)|早:buongiorno (informale)|拜拜:ciao ciao|不用谢:non c'è di che|还行:così così|不错:niente male|挺好的:abbastanza bene|挺:abbastanza|对:giusto, sì|是的:sì, esatto|嗯:mh-mh, sì|幺:uno (nei numeri di telefono)|这里:qui|那里:lì|哪里:dove|周:settimana|周一:lunedì|周末:fine settimana|一会儿:tra poco|马上:subito|差不多:più o meno|慢:lento|一遍:una volta (ripetendo)|再:di nuovo|来不及:non fare in tempo|来得及:fare in tempo|关上:chiudere|让:lasciare; da (passivo parlato)|那个:quello; ehm…|就是:cioè; proprio|不好意思:scusi, mi scusi|请问:scusi, posso chiedere|帮:aiutare|洗手间:bagno|早上好:buongiorno|晚安:buonanotte|慢走:arrivederci (a chi esce)|贵:caro|便宜:economico|辣:piccante|辣的:piccante|买单:il conto|干杯:cin cin|知道:sapere|等一下:aspetta un attimo|一下:un attimo|加油:forza! dai!|关系:relazione|意大利菜:cucina italiana|北京菜:cucina di Pechino|一遍:una volta|怎么说:come si dice|什么意思:che cosa significa|只:solo; classificatore per animali|它:esso, lo|走吧:andiamo|吃了吗:hai mangiato? (saluto)|几点:che ora|多长时间:quanto tempo|两个月:due mesi|月:mese, luna|个月:mese (durata)|进步:progredire|出去:uscire|回意大利:tornare in Italia|做:fare|怕:avere paura|科:materia; sezione|看:guardare|过两次:due volte|两次:due volte|爸:papà|怕:avere paura|飞:volare|大:grande|六:sei|哥:fratello maggiore|鸡:pollo|七:sette|西:ovest|中:centro, medio|人:persona|菜:verdura, piatto|八:otto|爱:amare|很:molto|谢:ringraziare|对:giusto; verso|春:primavera|学:studiare|四:quattro|忙:occupato|汤:zuppa|糖:zucchero|躺:sdraiarsi|烫:scottante|衣:vestito|姨:zia (materna)|椅:sedia|意:idea, intenzione|拔:estrarre|把:afferrare; particella 把|肥:grasso|匪:bandito|费:spesa|通:passare attraverso|同:uguale, insieme|桶:secchio|痛:dolore|呼:espirare|湖:lago|虎:tigre|户:famiglia, porta|"+
 "横:tratto orizzontale|竖:tratto verticale|撇:tratto obliquo a sinistra|捺:tratto obliquo a destra|点:punto; ora|提:tratto in risalita|折:tratto piegato|钩:gancio|山:montagna|日:sole, giorno|月:luna, mese|木:albero, legno|口:bocca|上:sopra|下:sotto|本:origine; classificatore per libri|休:riposare|明:luminoso|森:foresta|吗:particella di domanda|清:limpido|晴:sereno|请:prego, invitare|情:sentimento|说:parlare|国:paese|们:suffisso del plurale|笔画:tratto (di un carattere)|田字格:griglia per scrivere i caratteri|部首:radicale|量词:classificatore|什么时候:quando|为什么:perché|怎么:come|件:classificatore per vestiti e faccende|要:volere, dovere|能:potere (capacità)|看见:vedere|看完:finire di guardare|做好:fare per bene|写错:scrivere sbagliato|正在:stare facendo|一刻:un quarto d'ora|分:minuto|您:Lei (cortese)|它:esso (cosa, animale)|你们:voi|好朋友:buon amico|很好:molto bene|不是:non è|不去:non andare|不忙:non occupato|一个:uno (+ classificatore)|一天:un giorno|第一:primo|一:uno|个:classificatore generico|不太:non molto|非常:estremamente|容易:facile|英文:inglese|起床:alzarsi|学校:scuola|手机:cellulare|自行车:bicicletta|偷:rubare|借:prestare|借给:prestare a|去年:l'anno scorso|每天:ogni giorno|常常:spesso|长城:la Grande Muraglia|进来:entrare (qui)|回来:tornare (qui)|回:tornare|进:entrare|回家:tornare a casa|下来:scendere|买不到:non trovarlo da comprare|看不见:non riuscire a vedere|听不懂:non riuscire a capire|听得懂:riuscire a capire|看得见:riuscire a vedere|罗:rete|银行:banca|桌子:tavolo|桌子上:sul tavolo|家:casa, famiglia|饭:pasto, riso cotto|吃饭:mangiare (un pasto)|中文:lingua cinese|学习:studiare|今天:oggi|明天:domani|昨天:ieri|现在:adesso|几:quanti|多少:quanto|钱:soldi|名字:nome|叫:chiamarsi|朋友:amico|老师:insegnante|学生:studente|一样:uguale|比:rispetto a|更:ancora più|最:il più|过:particella di esperienza|找到:trovare|因为:siccome|所以:quindi|虽然:anche se|但是:ma|如果:se|就:allora, subito|还是:oppure (domanda)|或者:oppure|不要:non farlo!|太好了:benissimo!|小时:ora (durata)|星期:settimana|星期一:lunedì|星期天:domenica|半:mezza").split("|").forEach(function(p){var i=p.indexOf(":");DICT[p.slice(0,i)]=p.slice(i+1)});
 W.forEach(function(w){DICT[w[0]]=w[2]});
